@@ -1,0 +1,17 @@
+<%= form_for @teacher do |f| %>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.text_field :password %>
+  </div>
+  <div>
+    <%= f.text_field :tel %>
+  </div>
+  <div>
+    <%= f.submit "送信" %>
+  </div>
+ <% end %>

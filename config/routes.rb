@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'teachers/index'
-　resources :teachers
+  get 'teachers/new'
+  resources :teachers
 end
