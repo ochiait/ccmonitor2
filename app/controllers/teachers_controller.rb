@@ -8,6 +8,7 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     @teacher.save
+    render :thanks
   end
   
   def teacher_params
