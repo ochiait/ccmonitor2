@@ -1,2 +1,30 @@
-<h1>Lessons#new</h1>
-<p>Find me in app/views/lessons/new.html.erb</p>
+<h2>レッスン登録</h2>
+<%= form_for @lesson do |f| %>
+  <div>
+    <%= label_tag :name, "日程" %>
+    <%= f.text_field :date %>
+  </div>
+  <div>
+    <%= label_tag :name, "開始時間" %>
+    <%= f.text_field :start_time %>
+  </div>
+  <div>
+    <%= label_tag :name, "終了時間" %>
+    <%= f.text_field :end_time %>
+  </div>
+  <div>
+    <%= label_tag :name, "名前" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= label_tag :name, "値段" %>
+    <%= f.text_field :price %>
+  </div>
+  <div>
+    <%= label_tag :name, "備考" %>
+    <%= f.text_field :comment %>
+  </div>
+  <div>
+    <%= f.submit "送信" %>
+  </div>
+ <% end %>
