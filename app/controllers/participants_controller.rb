@@ -3,6 +3,10 @@ class ParticipantsController < ApplicationController
   def new
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
     @participant = Participant.new
+    
+    #lessonコントローラーからデータを呼び出し(後で作成)
+    
+    
   end
   # データを作成
   def create
