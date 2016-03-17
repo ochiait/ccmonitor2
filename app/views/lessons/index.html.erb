@@ -1,0 +1,31 @@
+<h1>レッスン一覧</h1>
+<div class="lesson_list">
+  <table>
+    <theader>
+      <tr>
+        <th>日付</th><th>開始時刻</th><th>レッスン名</th><th>予約状況</th><th>詳細</th>
+      </tr>
+    </theader>
+    <tbody>
+      <% @lessons.each do |lesson| %>
+        <tr>
+          <td>
+            <%= lesson.date %>
+          </td>
+          <td>
+            <%= lesson.start_time %>
+          </td>
+          <td>
+            <%= lesson.name %>
+          </td>
+          <td>
+            予約状況
+          </td>
+          <td>
+            <%= link_to "詳細", lesson_path(lesson) %>
+          </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

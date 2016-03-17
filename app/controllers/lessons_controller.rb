@@ -25,9 +25,17 @@ class LessonsController < ApplicationController
     @lesson.save
     render :thanks
   end
-  
+    # 一覧表示
+  def index
+    @lessons = Lesson.all
+  end
+    # レッスン詳細画面
+  def show
+    @lesson = Lesson.find(params[:id])
+  end
+
   def lesson_params
-    params.require(:lesson).permit(:date, :start_time, :end_time, :name, :price, :name, :comment)
+    params.require(:lesson).permit(:date, :start_time, :end_time, :name, :price, :comment)
   end  
   
 end
