@@ -2,7 +2,7 @@ class ParticipantsController < ApplicationController
      # データ作成の画面表示
   def new
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
-    # @participant = Participant.new
+    @participant = Participant.new
     
     #lessonコントローラーからデータを呼び出し
     @lesson = Lesson.find(params[:lesson_id])
