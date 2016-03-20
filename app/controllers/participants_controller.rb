@@ -1,12 +1,13 @@
 class ParticipantsController < ApplicationController
-     # データ作成の画面表示
+  # 参加者の一覧表示
+  def index
+    @participants = Participant.all
+  end
   def new
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
     @participant = Participant.new
-    
     #lessonコントローラーからデータを呼び出し
     @lesson = Lesson.find(params[:lesson_id])
-    
   end
   # データを作成
   def create
@@ -17,5 +18,6 @@ class ParticipantsController < ApplicationController
   
   def participant_params
     params.require(:participant).permit(:name, :email, :tel)
-  end  
+  end
+
 end
