@@ -4,8 +4,8 @@ class ParticipantsController < ApplicationController
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
     # @participant = Participant.new
     
-    #lessonコントローラーからデータを呼び出し(後で作成)
-    
+    #lessonコントローラーからデータを呼び出し
+    @lesson = Lesson.find(params[:lesson_id])
     
   end
   # データを作成

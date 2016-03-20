@@ -1,4 +1,19 @@
-<h2>レッスン予約</h2>
-
-# レッスンの詳細表示
-
+<h1>レッスン予約</h1>
+  <h2>レッスン詳細</h>
+  <div class="lesson_detail">
+    <div class="label">レッスンID</div>
+    <div class="value"><%= @lesson.id %></div>
+    <div class="label">日付</div>
+    <div class="value"><%= @lesson.date %></div>
+    <div class="label">開始時刻</div>
+    <div class="value"><%= @lesson.start_time %></div>
+    <div class="label">終了時刻</div>
+    <div class="value"><%= @lesson.end_time %></div>
+    <div class="label">レッスン名</div>
+    <div class="value"><%= @lesson.name %></div>
+    <div class="label">料金</div>
+    <div class="value"><%= @lesson.price %></div>
+    <div class="label">料金</div>
+    <div class="value"><%= @lesson.comment %></div>
+  </div>  
+</div>
