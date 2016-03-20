@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/participants/new'
+  get "/lessons/:lesson_id/participants/new", :controller => :participants, :action => :new
   resources :participants
 
   get 'lessons/new'
