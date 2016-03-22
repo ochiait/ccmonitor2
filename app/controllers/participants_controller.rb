@@ -19,6 +19,7 @@ class ParticipantsController < ApplicationController
   def new
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
     @participant = Participant.new
+    @participant.lesson_id = params[:lesson_id]
     #lessonコントローラーからデータを呼び出し
     @lesson = Lesson.find(params[:lesson_id])
   end
@@ -26,11 +27,12 @@ class ParticipantsController < ApplicationController
   def create
     @participant = Participant.new(participant_params)
     @participant.save
+    
     render :thanks
   end
   
   def participant_params
-    params.require(:participant).permit(:name, :email, :tel)
+    params.require(:participant).permit(:name, :email, :tel, :lesson_id)
   end
 
 end

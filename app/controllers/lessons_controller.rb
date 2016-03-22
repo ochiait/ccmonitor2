@@ -32,6 +32,7 @@ class LessonsController < ApplicationController
     # レッスン詳細画面
   def show
     @lesson = Lesson.find(params[:id])
+    @participants = Participant.where(lesson_id: params[:id])
   end
 
   def lesson_params
