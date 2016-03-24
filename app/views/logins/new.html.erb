@@ -5,8 +5,8 @@
 <%= form_tag login_path do %>
 <table id="login_form">
   <tr>
-    <td><%= label_tag :name, 'ユーザー名' %></td>
-    <td><%= text_field_tag :name, params[:name] %></td>
+    <td><%= label_tag :email, 'アドレス' %></td>
+    <td><%= text_field_tag :email, params[:email] %></td>
   </tr>
 
   <tr>
