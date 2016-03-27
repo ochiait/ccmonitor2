@@ -4,11 +4,11 @@ class LoginsController < ApplicationController
   end
 
   def create
-    teacher = Teacher.find(params[:id])
+    teacher = Teacher.find_by_email params[:email]
     if teacher && teacher.authenticate(params[:pass])
       # セッションのキー:teacher_idへ先生のIDを登録
       session[:teacher_id] = teacher.id
-      redirect_to root_path
+      redirect_to '/lessons/index'
     else
       # flash変数にメッセージをセット
       flash.now.alert = "もう一度入力してください。"

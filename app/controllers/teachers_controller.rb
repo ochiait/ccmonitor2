@@ -2,15 +2,13 @@
 #
 # Table name: teachers
 #
-#  id                    :integer          not null, primary key
-#  name                  :string           not null
-#  email                 :string           not null
-#  password              :string           not null
-#  tel                   :string           not null
-#  created_at            :datetime         not null
-#  updated_at            :datetime         not null
-#  password_digest       :srting
-#  password_confirmation :srting
+#  id              :integer          not null, primary key
+#  name            :string           not null
+#  email           :string           not null
+#  password_digest :string           not null
+#  tel             :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
 #
 
 class TeachersController < ApplicationController
@@ -27,6 +25,6 @@ class TeachersController < ApplicationController
   end
   
   def teacher_params
-    params.require(:teacher).permit(:name, :email, :password, :tel)
+    params.require(:teacher).permit(:name, :email, :password, :password_confirmation, :tel)
   end  
 end
