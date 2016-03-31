@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class LessonsForParticipantsControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
+  test "should index " do
+    get :index
     assert_response :success
   end
 
