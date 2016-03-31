@@ -22,6 +22,7 @@ class LessonsController < ApplicationController
   # データを作成
   def create
     @lesson = Lesson.new(lesson_params)
+    @lesson.teacher_id = session[:teacher_id]
     @lesson.save
     render :thanks
   end
