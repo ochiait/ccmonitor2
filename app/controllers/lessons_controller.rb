@@ -29,7 +29,7 @@ class LessonsController < ApplicationController
   end
     # 一覧表示
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.where(teacher_id: session[:teacher_id])
   end
     # レッスン詳細画面
   def show
