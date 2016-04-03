@@ -20,6 +20,7 @@
           </td>
           <td>
             予約状況
+            <%= lesson.count %>
           </td>
           <td>
             <%= link_to "詳細", lesson_path(lesson) %>
@@ -29,3 +30,4 @@
     </tbody>
   </table>
 </div>
+<%= link_to "レッスン作成", "/lessons/new" %>
