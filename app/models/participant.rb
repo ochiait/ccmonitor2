@@ -12,4 +12,5 @@
 #
 
 class Participant < ActiveRecord::Base
+  belongs_to :lesson
 end
