@@ -12,6 +12,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  teacher_id :srting
+#  capacity   :integer
 #
 
 module LessonsHelper
