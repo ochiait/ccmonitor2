@@ -1,8 +1,0 @@
-<h1>料理教室予約システム</h1>
-<p>ログイン画面（先生用）</p>
-
-<% if current_teacher == nil %>
-  <%= link_to "ログイン", login_path %>
-<% else %>
-  <%= link_to 'ログアウト', login_path, :confirm => 'ログアウトしますか？', :method => :delete %>
-<% end %>
