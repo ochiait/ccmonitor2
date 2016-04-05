@@ -31,7 +31,6 @@ class LessonsController < ApplicationController
     # 一覧表示
   def index
     @lessons = Lesson.where(teacher_id: session[:teacher_id])
-    @participants = Participant.where(lesson_id: params[:id])
   end
     # レッスン詳細画面
   def show

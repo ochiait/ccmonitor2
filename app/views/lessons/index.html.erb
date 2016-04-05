@@ -19,9 +19,7 @@
             <%= lesson.name %>
           </td>
           <td>
-            予約状況
             <%= lesson.participants.count %>/<%= lesson.capacity %>
-            
           </td>
           <td>
             <%= link_to "詳細", lesson_path(lesson) %>
