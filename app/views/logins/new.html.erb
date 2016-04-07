@@ -44,34 +44,23 @@
   <!-- 右寄せになる部分 ================ -->
       <ul class="nav navbar-nav navbar-right">
         <!-- リンクのみ -->
-          <li><a href="#">問い合わせ</a></li>
+          <li><%= link_to "新規登録", new_teacher_path %></li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-<h1>先生ログイン画面</h1>
-
-<!-- フラッシュ変数のメッセージを表示（ログインエラー時のみ） -->
-<p><font color=red><%= flash[:alert] %></font></p>
-<%= form_tag login_path do %>
-<table id="login_form">
-  <tr>
-    <td><%= label_tag :email, 'アドレス' %></td>
-    <td><%= text_field_tag :email, params[:email] %></td>
-  </tr>
-
-  <tr>
-    <td><%= label_tag :pass, 'パスワード' %></td>
-    <td><%= password_field_tag :pass, params[:pass] %></td>
-  </tr>
-
-  <tr>
-    <td><%= submit_tag "ログイン" %></td>
-  </tr>
-</table>
-<% end %>
-
-<%= link_to "新規登録1", new_teacher_path %>
-
+<div class="container" style="padding:20px 0">
+    <form>
+      <div class="form-group has-error">
+        <h1>ログイン</h1>
+        <%= label_tag :email, 'メールアドレス', :class => 'control-label'  %>
+        <%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
+        <%= label_tag :pass, 'パスワード', :class => 'control-label'  %>
+        <%= text_field_tag :pass, params[:email], :class => 'form-control', :placeholder => 'password' %>
+        <span class="help-block">正しく入力されていません。</span>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="ログイン" class="btn btn-primary">
+      </div>
+    </form>
+</div>
