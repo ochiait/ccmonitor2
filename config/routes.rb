@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :teachers
   
   resource :login
+  
+  root :to => 'lessons_for_participants#index'
 end
