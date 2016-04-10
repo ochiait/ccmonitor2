@@ -12,10 +12,6 @@
 #
 
 class ParticipantsController < ApplicationController
-  # 参加者の一覧表示
-  def index
-    @participants = Participant.all
-  end
   def new
     #participant modelを空で生成し、@participantというインスタンス変数に格納（箱を作る）
     @participant = Participant.new
