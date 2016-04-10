@@ -14,36 +14,19 @@
       <ul class="nav navbar-nav">
         <!-- リンクのみ -->
           <li class="active"><a href="#">レッスン</a></li>
-          <li><a href="/pages/tbd1">Q＆A</a></li>
-          <li><a href="/pages/tbd1">ブログ</a></li>
-          <li><a href="/pages/tbd1">問い合わせ</a></li>
+          <li><a href="#">Q＆A</a></li>
+          <li><a href="#">ブログ</a></li>
+          <li><a href="#">問い合わせ</a></li>
       </ul>
   <!-- 右寄せになる部分 ================ -->
       <ul class="nav navbar-nav navbar-right">
         <!-- リンクのみ -->
-          <li><a href="/login/new">先生はこちら</a></li>
+          <li><a href="#">先生はこちら</a></li>
       </ul>
     </div>
   </div>
 </nav>
  <!-- ナビ部分終わり ================ -->
 <div class="container" style="padding:20px 0">
-<h1>レッスン一覧(生徒用)</h1>
-
-   <table class="table table-striped table-bordered table-hover table-condensed">
-        <thead>
-          <tr><th>日付</th><th>開始時刻</th><th>レッスン名</th><th>予約状況</th><th>詳細</th></tr>
-        </thead>
-        <tbody>
-          <% @lessons.each do |lesson| %>
-          <tr>
-            <td><%= lesson.date %></td>
-            <td><%= lesson.start_time %></td>
-            <td><%= lesson.name %></td>
-            <td><%= lesson.participants.count %>/<%= lesson.capacity %></td>
-            <td><%= link_to "詳細", "/lessons/#{lesson.id}/participants/new" %></td>
-          </tr>
-          <% end %>
-        </tbody>
-    </table>
+        <h1>開発中です</h1>
 </div>

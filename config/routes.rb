@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/tbd'
+  get 'pages/tbd1'
 
   get 'lessons_for_participants/index'
 
