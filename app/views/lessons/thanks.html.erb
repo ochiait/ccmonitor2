@@ -1,1 +1,55 @@
-<h2>レッスンが登録されました。</h2>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">料理教室運営支援システム</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  <!-- 中央のナビゲーション部分 ================ -->
+    <div class="collapse navbar-collapse" id="nav_target">
+      <ul class="nav navbar-nav">
+        <!-- レッスン ドロップダウン -->
+          <li class="dropdown active">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">レッスン<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/lessons/index">レッスン一覧</a></li>
+              <li><a href="/lessons/new">レッスン作成</a></li>
+            </ul>
+          </li>
+        <!-- リンクのみ -->
+          <li><a href="/pages/tbd">ブログ</a></li>
+          <li><a href="/pages/tbd">Q＆A</a></li>
+        <!-- 生徒管理 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">生徒管理<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">生徒名簿</a></li>
+              <li><a href="/pages/tbd">一斉メール</a></li>
+            </ul>
+          </li>  
+        <!-- 物販 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">物　販<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">商品登録</a></li>
+              <li><a href="/pages/tbd">売上管理</a></li>
+            </ul>
+          </li> 
+
+      </ul>
+  <!-- 右寄せになる部分 ================ -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- リンクのみ -->
+        　<li><%= link_to "新規登録", new_teacher_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- ナビ部分終わり ================ -->
+<div class="container" style="padding:20px 0">
+    <h1>レッスンが登録されました。</h1>
+</div>
