@@ -1,34 +1,83 @@
-<h2>レッスン登録</h2>
-<%= form_for @lesson do |f| %>
-  <div>
-    <%= label_tag :name, "日程" %>
-    <%= f.text_field :date %>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">料理教室運営支援システム</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  <!-- 中央のナビゲーション部分 ================ -->
+    <div class="collapse navbar-collapse" id="nav_target">
+      <ul class="nav navbar-nav">
+        <!-- レッスン ドロップダウン -->
+          <li class="dropdown active">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">レッスン<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/lessons/index">レッスン一覧</a></li>
+              <li><a href="/lessons/new">レッスン作成</a></li>
+            </ul>
+          </li>
+        <!-- リンクのみ -->
+          <li><a href="/pages/tbd">ブログ</a></li>
+          <li><a href="/pages/tbd">Q＆A</a></li>
+        <!-- 生徒管理 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">生徒管理<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">生徒名簿</a></li>
+              <li><a href="/pages/tbd">一斉メール</a></li>
+            </ul>
+          </li>  
+        <!-- 物販 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">物　販<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">商品登録</a></li>
+              <li><a href="/pages/tbd">売上管理</a></li>
+            </ul>
+          </li> 
+
+      </ul>
+  <!-- 右寄せになる部分 ================ -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- リンクのみ -->
+          <li><%= link_to "ログイン", new_login_path %></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <%= label_tag :name, "開始時間" %>
-    <%= f.text_field :start_time %>
-  </div>
-  <div>
-    <%= label_tag :name, "終了時間" %>
-    <%= f.text_field :end_time %>
-  </div>
-  <div>
-    <%= label_tag :name, "レッスン名" %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= label_tag :name, "定員" %>
-    <%= f.text_field :capacity %>
-  </div>
-  <div>
-    <%= label_tag :name, "料金" %>
-    <%= f.text_field :price %>
-  </div>
-  <div>
-    <%= label_tag :name, "備考" %>
-    <%= f.text_field :comment %>
-  </div>
-  <div>
-    <%= f.submit "送信" %>
+</nav>
+  <!-- ナビ部分終わり ================ -->
+
+<div class="container" style="padding:20px 0">
+  <%= form_for @lesson do |f| %>
+    <div class="form-group">
+      <h1>レッスン新規登録</h1>
+      <%= label_tag :date, '日程', :class => 'control-label'  %>
+      <%= f.text_field :date, :class => 'form-control', :placeholder => 'date' %>
+      
+      <%= label_tag :start_time, '開始時間', :class => 'control-label'  %>
+      <%= f.text_field :start_time, :class => 'form-control', :placeholder => 'date' %>
+
+      <%= label_tag :end_time, '終了時間', :class => 'control-label'  %>
+      <%= f.text_field :end_time, :class => 'form-control', :placeholder => 'date' %>
+      
+      <%= label_tag :name, 'レッスン名', :class => 'control-label'  %>
+      <%= f.text_field :name, :class => 'form-control', :placeholder => 'date' %>
+      
+      <%= label_tag :capacity, '定員', :class => 'control-label'  %>
+      <%= f.text_field :capacity, :class => 'form-control', :placeholder => 'date' %>
+      
+      <%= label_tag :price, '料金', :class => 'control-label'  %>
+      <%= f.text_field :price, :class => 'form-control', :placeholder => 'date' %>
+      
+      <%= label_tag :comment, '備考', :class => 'control-label'  %>
+      <%= f.text_field :comment, :class => 'form-control', :placeholder => 'date' %>
+    </div>
+  <div class="form-group">
+    <%= f.submit "送信" , :class => 'btn btn-primary' %>
   </div>
  <% end %>
+</div> 
