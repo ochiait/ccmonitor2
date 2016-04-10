@@ -1,26 +1,77 @@
-<h2>先生登録</h2>
-<%= form_for @teacher do |f| %>
-  <div>
-    <%= label_tag :name, "名前" %>
-    <%= f.text_field :name %>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">料理教室運営支援システム</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  <!-- 中央のナビゲーション部分 ================ -->
+    <div class="collapse navbar-collapse" id="nav_target">
+      <ul class="nav navbar-nav">
+        <!-- レッスン ドロップダウン -->
+          <li class="dropdown active">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">レッスン<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/lessons/index">レッスン一覧</a></li>
+              <li><a href="/lessons/new">レッスン作成</a></li>
+            </ul>
+          </li>
+        <!-- リンクのみ -->
+          <li><a href="/pages/tbd">ブログ</a></li>
+          <li><a href="/pages/tbd">Q＆A</a></li>
+        <!-- 生徒管理 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">生徒管理<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">生徒名簿</a></li>
+              <li><a href="/pages/tbd">一斉メール</a></li>
+            </ul>
+          </li>  
+        <!-- 物販 ドロップダウン -->
+          <li class="dropdown">
+            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">物　販<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/pages/tbd">商品登録</a></li>
+              <li><a href="/pages/tbd">売上管理</a></li>
+            </ul>
+          </li> 
+
+      </ul>
+  <!-- 右寄せになる部分 ================ -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- リンクのみ -->
+          <li><%= link_to "ログイン", new_login_path %></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <%= label_tag :name, "メール" %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= label_tag :name, "パスワード" %>
-    <%= f.text_field :password %>
-  </div>
-  <div>
-    <%= label_tag :name, "パスワード（確認）" %>
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div>
-    <%= label_tag :name, "電話番号" %>
-    <%= f.text_field :tel %>
-  </div>
-  <div>
-    <%= f.submit "送信" %>
+</nav>
+  <!-- ナビ部分終わり ================ -->
+
+<div class="container" style="padding:20px 0">
+  <%= form_for @teacher do |f| %>
+    <div class="form-group">
+      <h1>先生新規登録</h1>
+      <%= label_tag :name, '名前', :class => 'control-label'  %>
+      <%= f.text_field :name, :class => 'form-control', :placeholder => 'name' %>
+  
+      <%= label_tag :email, 'メールアドレス', :class => 'control-label'  %>
+      <%= f.text_field :email,  :class => 'form-control', :placeholder => 'email' %>
+  
+      <%= label_tag :password, 'パスワード', :class => 'control-label'  %>
+      <%= f.text_field :password,  :class => 'form-control', :placeholder => 'password' %>        
+  
+      <%= label_tag :password_confirmation, 'パスワード(確認)', :class => 'control-label'  %>
+      <%= f.text_field :password_confirmation,  :class => 'form-control', :placeholder => 'password' %>      
+  
+      <%= label_tag :tel, '電話番号', :class => 'control-label'  %>
+      <%= f.text_field :tel, :class => 'form-control', :placeholder => 'TEL' %>
+    </div>
+  <div class="form-group">
+    <%= f.submit "送信" , :class => 'btn btn-primary' %>
   </div>
  <% end %>
+</div> 
