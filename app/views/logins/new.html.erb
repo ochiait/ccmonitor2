@@ -50,17 +50,17 @@
   </div>
 </nav>
 <div class="container" style="padding:20px 0">
-    <form>
+   <%= form_tag login_path do %>
       <div class="form-group has-error">
         <h1>ログイン</h1>
         <%= label_tag :email, 'メールアドレス', :class => 'control-label'  %>
         <%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
         <%= label_tag :pass, 'パスワード', :class => 'control-label'  %>
-        <%= text_field_tag :pass, params[:email], :class => 'form-control', :placeholder => 'password' %>
+        <%= text_field_tag :pass, params[:pass], :class => 'form-control', :placeholder => 'password' %>
         <span class="help-block">正しく入力されていません。</span>
       </div>
       <div class="form-group">
-        <input type="submit" value="ログイン" class="btn btn-primary">
+        <%= submit_tag "ログイン" , :class => 'btn btn-primary' %>
       </div>
-    </form>
+   <% end %>
 </div>
