@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/tbd'
+
   get 'lessons_for_participants/index'
 
   get "/lessons/:lesson_id/participants/new", :controller => :participants, :action => :new
