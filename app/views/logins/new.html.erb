@@ -2,7 +2,7 @@
   <div class="container-fluid">
   <!-- ヘッダー部分 ================ -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">料理教室運営支援システム</a>
+      <a class="navbar-brand" href="<%= new_login_path %>">料理教室運営支援システム</a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav">
         <!-- レッスン ドロップダウン -->
           <li class="dropdown active">
-            <a href="/pages/tbd" class="dropdown-toggle" data-toggle="dropdown">レッスン<span class="caret"></span></a>
+            <a href="/lessons/index" class="dropdown-toggle" data-toggle="dropdown">レッスン<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="/lessons/index">レッスン一覧</a></li>
               <li><a href="/lessons/new">レッスン作成</a></li>
